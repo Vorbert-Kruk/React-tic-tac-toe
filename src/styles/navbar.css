@@ -1,0 +1,26 @@
+nav {
+    display: flex;
+    position: relative;
+    width: 100vw;
+    background-color: var(--purple-color);
+    flex-direction: row;
+    font-size: var(--basic-font-size);
+    padding: calc(var(--basic-font-size) * .75) 0;
+    color: var(--light-color);
+}
+nav > * {
+    display: inline-block;
+    flex: 33%;
+    transition: all 350ms ease-in-out;
+}
+nav > h2:first-child {
+    position: relative;
+    text-align: right;
+}
+nav > h2:last-child {
+    text-align: left;
+}
+nav > h2.active {
+    /* color: var(--light-purple-color); */
+    text-decoration: underline;
+}

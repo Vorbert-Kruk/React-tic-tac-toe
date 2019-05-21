@@ -1,0 +1,32 @@
+:root {
+  --dark-color: #282c34;
+  --light-color: #F4F4F4;
+  --purple-color: hsl(240, 80%, 70%);
+  --light-purple-color: hsla(240, 70%, 75%, .7);
+
+  --basic-font-size: calc(15px + 10 * calc(100vw - 450px) / 450);
+
+  --board-size: calc(var(--basic-font-size) * 13);
+  /* --board-color: hsl(240, 85%, 75%); */
+  --board-color: hsl(240, 60%, 27%);
+  --board-offset: calc(var(--basic-font-size) * 1) auto;
+
+  --board-piece-thickness: calc(var(--basic-font-size) * .35);
+  --board-piece-color: rgba(119, 119, 255, .40);
+  --board-piece-hover-color: rgba(119, 119, 255, .55);
+  --board-piece-active-color: rgba(119, 119, 255, .70);
+
+  --button-font-size: calc(var(--basic-font-size) * .5);
+
+  --overlay-font-size: calc(var(--basic-font-size) * 1.1);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  margin: 0;
+  font-family: Helvetica, sans-serif;
+  background-color: var(--dark-color);
+  overflow: hidden;
+}

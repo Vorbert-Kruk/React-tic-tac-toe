@@ -1,0 +1,34 @@
+.board {
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    box-sizing: border-box;
+    grid-gap: .5em;
+
+    margin: var(--board-offset);
+    width: var(--board-size);
+    height: var(--board-size);
+    border-radius: calc(var(--board-size) * .05);
+    overflow: hidden;
+    background-color: var(--board-color);
+}
+/* Guzik resetu gry */
+button.restart-btn {
+    display: block;
+    margin: 0 auto;
+    background-color: inherit;
+    font-size: var(--button-font-size);
+    margin: var(--board-offset);
+    color: var(--purple-color);
+    border: .125em solid var(--purple-color);
+    border-radius: .3em;
+    padding: .35em .75em;
+    transition: all 350ms ease-out;
+}
+button.restart-btn:hover,
+button.restart-btn:focus {
+    cursor: pointer;
+    background-color: var(--purple-color);
+    color: var(--light-color);
+}

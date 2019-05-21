@@ -1,0 +1,54 @@
+.board-piece { 
+    display: inline-block;
+    position: relative;
+    background-color: var(--board-piece-color);
+    transition: all 350ms ease;
+}
+.board-piece:hover {
+    cursor: pointer;
+    background-color: var(--board-piece-hover-color);
+}
+.board-piece.cross,
+.board-piece.circle {
+    background-color: var(--board-piece-active-color);
+}
+.board-piece.cross:hover,
+.board-piece.circle:hover {
+    cursor: default;
+}
+.board-piece::before,
+.board-piece::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: var(--light-color);
+    height: 0;
+    box-shadow: inset 0 0 0 0 var(--light-color);
+}
+/* Krzyżyk */
+.board-piece.cross::before, 
+.board-piece.cross::after {
+    height: 70%;
+    width: var(--board-piece-thickness);
+    border-radius: calc(var(--board-piece-thickness) * .3);
+    transition: all 350ms ease-in-out;
+}
+.board-piece.cross::before {
+    transform: translate(-50%, -50%) rotate(45deg);
+}
+.board-piece.cross::after {
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+/* Kółko */
+.board-piece.circle::before {
+    transition: box-shadow 350ms cubic-bezier(.31,.55,.2,1.03);
+}
+.board-piece.circle::before {
+    width: 70%;
+    height: 70%;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    background-color: transparent;
+    box-shadow: inset 0 0 0 var(--board-piece-thickness) var(--light-color);
+}
